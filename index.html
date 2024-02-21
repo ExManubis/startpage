@@ -1,148 +1,70 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <title>mikkel@home &gt; newtab</title>
-    <style>
-        html {
-            align-items: center;
-            background-color: #1E1F29;
-            color: #f8f8f2;
-            display: flex;
-            font: 22px/1 "Inconsolata", monospace;
-            height: 100%;
-            justify-content: center;
-        }
+    <head>
+        <meta charset="UTF-8">
+        <title>startpage</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <script src="time.js"></script>
+    </head>
 
-        body {
-            background-color: #282a36;
-            border-radius: 2px;
-            box-shadow: 6px 6px 12px #1d1f2187;
-            color: #f8f8f2;
-            display: flex;
-            flex-direction: column;
-            min-height: 30ch;
-            min-width: 50vw;
-            padding: 2em;
-        }
+    <body onload="realtimeClock()">
+        <div class="time">
+            <div id="clock"></div>
+        </div>
 
-        p {
-            margin: 0;
-        }
+        <div class="title">Hail Satan.</div>
+        <br>
+        <br>
+        
+        <div class="bookmark">
+            <div class="category">
+                <div class="bookmarks">
+                    <li><a href="https://github.com">Github</a></li>
+                    <li><a href="https://kea-fronter.itslearning.com">Fronter</a></li>
+                    <li><a href="https://outlook.office365.com/mail/">KEA Mail</a></li>
+                    <li><a href="https://cloud.timeedit.net/kea/web/stud/ri1f7X4Q6QZZYYQv5Q007130y7Y7.html">Skema</a></li>
+                    <li><a href="https://learncodethehardway.com/client/">LPTHW</a></li>
+                    <li><a href="https://w3schools.com">W3Schools</a></li>
+                    <li><a href="https://portal.azure.com/#home">Azure</a></li>
+            </div>
+                </div>
+            
+            <div class="category">
+                <div class="bookmarks">
+                    <li><a href="https://vinylpladen.dk">Vinylpladen</a></li>
+                    <li><a href="https://imusic.dk">iMusic</a></li>
+                    <li><a href="https://darknessshallrise.de/dsr-shop/?v=dd65ef9a5579">DSR Shop</a></li>
+                    <li><a href="https://proshop.dk">Proshop</a></li>
+                </div>
+            </div>
 
-        p span {
-            color: #bd93f9;
-        }
+            <div class="category">
+                <div class="bookmarks">
+                    <li><a href="https://reddit.com">Reddit</a></li>
+                    <li><a href="https://discogs.com">Discogs</a></li>
+                    <li><a href="https://stackoverflow.com">Stack OF</a></li>
+                    <li><a href="https://linkedin.com">LinkedIn</a></li>
+                    <li><a href="https://discord.com">Discord</a></li>
+                </div>
+            </div>
+            <div class="category">
+                <div class="bookmarks">
+                    <li><a href="https://youtube.com">Youtube</a></li>
+                    <li><a href="https://netflix.com">Netflix</a></li>
+                    <li><a href="https://batstream.exmanubis.dk">Jellyfin</a></li>
+                    <li><a href="https://crunchyroll.com">Crunchyroll</a></li>
+                    <li><a href="https://www.hbomax.com/dk/da">HBO Max</a></li>
+                </div>
+            </div>
+            
+            <div class="category">
+                <div class="bookmarks">
+                    <li><a href="https://theverge.com">The Verge</a></li>
+                    <li><a href="https://arstechnica.com">ArsTechnica</a></li>
+                    <li><a href="https://9to5linux.com/">9to5Linux</a></li>
+                </div>
+            </div>
 
-        a {
-            color: inherit;
-            text-decoration: none;
-        }
-        a:focus,
-        a:hover {
-            color: #6272A4;
-        }
-
-        ul {
-            list-style-type: none;
-            margin: 0;
-            padding: 0;
-        }
-
-        nav {
-            column-gap: 2em;
-            display: grid;
-            grid-template-columns: auto auto auto;
-            padding: 1em 0;
-        }
-
-        ul:nth-child(5n + 1) li:first-child {
-            color: #FF5555;
-        }
-
-        ul:nth-child(5n + 2) li:first-child {
-            color: #FFB86C;
-        }
-
-        ul:nth-child(5n + 3) li:first-child {
-            color: #FF79C6;
-        }
-
-        ul:nth-child(5n + 4) li:first-child {
-            color: #F1FA8C;
-        }
-
-        ul:nth-child(5n + 5) li:first-child {
-            color: #8BE9FD;
-        }
-
-        ul:nth-child(5n + 6) li:first-child {
-            color: #50FA7B;
-        }
-
-        li:last-child {
-            margin: 0 0 1em;
-        }
-
-        p #cursor {
-            background-color: #282A36;
-            animation: blink 2s infinite;
-        }
-
-        @keyframes blink {
-            0% { opacity: 0; }
-            49% { opacity: 0; }
-            50% { opacity: 1; }
-        }
-    </style>
-</head>
-<body>
-    <p><span>mikkel@home &gt; </span>newtab</p>
-    <nav>
-        <ul>
-            <li>~/news</li>
-	        <li><a href="https://www.dr.dk/">/dr_nyheder</a></li>
-	        <li><a href="https://www.omglinux.com/">/omg_linux</a></li>
-            <li><a href="https://www.arstechnica.com/">/ars_technica</a></li>
-            <li><a href="https://daringfireball.net/">/daring_fireball</a></li>
-        </ul>
-  	    
-        <ul>
-	        <li>~/fun</li>
-            <li><a href="https://www.reddit.com/">/reddit</a></li>
-            <li><a href="https://www.reddit.com/r/unixporn/">/r/unixporn</a></li>
-            <li><a href="https://lemmy.sdf.org/">/lemmy.sdf</a></li>
-        </ul>
-
-        <ul>
-            <li>~/media</li>
-            <li><a href="https://yewtu.be/">/yewtu.be</a></li>
-            <li><a href="https://www.dr.dk/drtv/">/drtv</a></li>
-            <li><a href="https://www.netflix.com/browse">/netflix</a></li>
-            <li><a href="https://play.hbomax.com/page/urn:hbo:page:home">/hbomax</a></li>
-            <li><a href="https://crunchyroll.com/">/crunchyroll</a></li>
-        </ul>
-
-        <ul>
-            <li>~/dev</li>
-            <li><a href="https://github.com/">/github</a></li>
-            <li><a href="https://neocities.org/">/neocities</a></li>
-            <li><a href="https://stpg.tk/">/stpg.tk</a></li>
-            <li><a href="https://wiki.archlinux.org/">/arch_wiki</a></li>
-        </ul>
-
-        <ul>
-            <li>~/misc</li>
-            <li><a href="https://1337x.to/home/">/1337x</a></li>
-            <li><a href="https://udongein.xyz/">/udongein</a></li>
-        </ul>
-        <ul>
-            <li>~/school</li>
-            <li><a href="https://kea-fronter.itslearning.com/">/fronter</a></li>
-            <li><a href="https://outlook.office365.com/mail/">/kea_mail</a></li>
-            <li><a href="https://io.adafruit.com/mikjorgensen/dashboards/mit-dashboard">/adafruit</a></li>
-            <li><a href="https://ittekwiki.nocturnalramblings.xyz/doku.php?id=start">/ittek_wiki</a></li>
-        </ul>
-    </nav>
-<p><span>mikkel@home &gt; </span><span id="cursor">_</span></p>
-</body>
+        </div>
+    </body>
 </html>
