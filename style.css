@@ -7,7 +7,7 @@ html {
     background-color: #1e2326;
     color: #a7c080;
     display: flex;
-    flex-flow: row nowrap;
+    flex-flow: column;
     justify-content: center;
     align-content: center;
     align-items: center;
@@ -54,7 +54,7 @@ body {
 .category {
     display: flex;
     flex-direction: column;
-    width: 180px;
+    width: 180px ;
 }
 
 .bookmark {
